@@ -2,7 +2,7 @@
 
 This week I have created a password generator. These are becoming increasingly more necesssary in today's world as cyber security has become a larger issue. Being able to create a new password that is secure enough is hard to do off the top of ones head. This application was built in order to take that guess work away and create a random password for anyone to use. 
 
-I was provided a starter code of HTML and CSS and was given the challenge of making adding JavaScript to make this password generator more interactive and functional. 
+I was provided a starter code of HTML and CSS and was given the challenge of adding JavaScript to make this password generator more interactive and functional. 
 
 ## Usage
 
@@ -14,7 +14,7 @@ I was provided a starter code of HTML and CSS and was given the challenge of mak
     * choosing CANCEL will leave out that specific character type from their final password
 * Once the user has clicked through all of the alerts, a randomly generated password will appear in the text box for them to use. 
 
-![Password Generator](https://media.giphy.com/media/do4PQjDtAhxQ0lQQZn/giphy.gif?cid=790b76113682f3a0b28a18ea68d891f92352311bd50d5450&rid=giphy.gif&ct=g)
+![Password Generator](https://media.giphy.com/media/fsOUFWsmV3tSHjhnA7/giphy.gif?cid=790b761128d38bb052f84a1e1d4ca621c836a73deb94639b&rid=giphy.gif&ct=g)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
