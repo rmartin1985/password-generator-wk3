@@ -6,10 +6,10 @@ I was provided a starter code of HTML and CSS and was given the challenge of add
 
 ## Usage
 
-* Upon loading the page, the user will see a screen with a blank box and a button that says "Generate Password"
+* Upon loading the page, the user will see a screen with a blank box and a button that says "Generate Password".
 * The user will click the button and then be given a prompt for the number of characters that they would like have for their password.
 * The password length for this application needs to be between 8 and 128 characters long. 
-* Then the user is asked if they want to include lower case, upper case, numbers, and special characters in thier password.
+* Then the user is asked if they want to include lower case, upper case, numbers, and special characters in their password.
     * choosing OK will add the specific character type to their final password
     * choosing CANCEL will leave out that specific character type from their final password
 * Once the user has clicked through all of the alerts, a randomly generated password will appear in the text box for them to use. 
