@@ -1,13 +1,5 @@
 // Assignment code here
 
-
-var randomFunc = {
-    lower: getRandomLower,
-    upper: getRandomUpper,
-    number: getRandomNumber,
-    symbol: getRandomSymbol
-};
-
 // function to generate random lower case letters
 function getRandomLower () {
    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -29,14 +21,6 @@ function getRandomUpper () {
     return symbols[Math.floor(Math.random() * symbols.length)];
  };
 
- console.log(getRandomLower());
- console.log(getRandomUpper());
- console.log(getRandomNumber());
- console.log(getRandomSymbol());
-
-
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -44,46 +28,62 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
     var characters = prompt("How many characters would you like your password to contain?");
-    var length = parseInt(characters);
+    if ((parseInt(characters) < 8) || (parseInt(characters) > 128)) {
+        alert("Please choose a number between 8 and 128");
+        return writePassword();
+    } 
+    else if (!characters) {
+        alert("You must select a number of characters for your password");
+        return writePassword();
+    } else {
+        var length = parseInt(characters);
+    }
     var hasLower = confirm("Do you want to include lower case letters?");
     var hasUpper = confirm("Do you want to include upper case letters?");
     var hasNumber = confirm("Do you want to include numbers?");
     var hasSymbol = confirm("Do you want to include special characters?");
   
-    console.log(length);
-    console.log(hasLower);
-    console.log(hasUpper);
-    console.log(hasNumber);
-    console.log(hasSymbol);
-  
-    var password = generatePassword(
+    var passwordEl = generatePassword(
         hasLower, 
         hasUpper, 
         hasNumber, 
         hasSymbol, 
         length
     );
+    console.log(passwordEl());
 };
      
 
-// var passwordText = document.querySelector("#password");
+function generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length) {
+    var password = ""
+    var functionArray = []
+    if (hasLower) {
+        functionArray.push(getRandomLower)
+    }
+    if (hasUpper) {
+        functionArray.push(getRandomUpper)
+    }
+    if (hasNumber) {
+        functionArray.push(getRandomNumber)
+    }
+    if (hasSymbol) {
+        functionArray.push(getRandomSymbol)
+    }
+    if (!hasLower && !hasUpper && !hasNumber && !hasSymbol) {
+        alert("You must confirm at least one to continue");
+        return writePassword();
+    }
+    for (var i = 0; i < length; i++ ) {
+        var index = Math.floor(Math.random() * functionArray.length)
+        password = password + functionArray[index]();
+    }
 
-// passwordText.value = password; 
+    var passwordText = document.querySelector("#password"); 
+
+    passwordText.value = password;
+};
 
 
-function generatePassword(lower, upper, number, symbol, length) {
-
-    var generatedPassword = '';
-
-    var typesCount = lower + upper + number + symbol;
-
-    console.log('typesCount: ', typesCount);
-
-    var typesArr = [{lower}, {upper}, {number}, {symbol}];
-
-    console.log('typesArr: ', typesArr);
-
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
