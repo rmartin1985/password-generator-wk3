@@ -21,10 +21,6 @@ function getRandomUpper () {
     return symbols[Math.floor(Math.random() * symbols.length)];
  };
 
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
 // Write password to the #password input
 function writePassword() {
     // prompt for character count
@@ -93,7 +89,8 @@ function generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length) {
     passwordText.value = password;
 };
 
-
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
