@@ -24,7 +24,7 @@ function getRandomUpper () {
 // Write password to the #password input
 function writePassword() {
     // prompt for character count
-    var characters = prompt("How many characters would you like your password to contain?");
+    var characters = prompt("How many characters would you like your password to contain?\nMust be between 8 and 128 characters");
     // make sure it is between 8 and 128 characters
     if ((parseInt(characters) < 8) || (parseInt(characters) > 128)) {
         alert("Please choose a number between 8 and 128");
@@ -38,13 +38,13 @@ function writePassword() {
         var length = parseInt(characters);
     }
     // confirm if they want lower case letters
-    var hasLower = confirm("Do you want to include lower case letters?");
+    var hasLower = confirm("Do you want to include lower case letters?\nOK for YES, CANCEL for NO");
     // confirm if they want upper case letters
-    var hasUpper = confirm("Do you want to include upper case letters?");
+    var hasUpper = confirm("Do you want to include upper case letters?\nOK for YES, CANCEL for NO");
     // confirm if they want numbers
-    var hasNumber = confirm("Do you want to include numbers?");
+    var hasNumber = confirm("Do you want to include numbers?\nOK for YES, CANCEL for NO");
     // confirm if they want special characters 
-    var hasSymbol = confirm("Do you want to include special characters?");
+    var hasSymbol = confirm("Do you want to include special characters?\nOK for YES, CANCEL for NO");
     // pass the answers into the generatePassword function
     generatePassword(
         hasLower, 
