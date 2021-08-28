@@ -38,9 +38,9 @@ function writePassword() {
         var length = parseInt(characters);
     }
     // confirm if they want lower case letters
-    var hasLower = confirm("Do you want to include lower case letters?\nOK for YES, CANCEL for NO");
+    var hasLower = confirm("Do you want to include lowercase letters?\nOK for YES, CANCEL for NO");
     // confirm if they want upper case letters
-    var hasUpper = confirm("Do you want to include upper case letters?\nOK for YES, CANCEL for NO");
+    var hasUpper = confirm("Do you want to include uppercase letters?\nOK for YES, CANCEL for NO");
     // confirm if they want numbers
     var hasNumber = confirm("Do you want to include numbers?\nOK for YES, CANCEL for NO");
     // confirm if they want special characters 
