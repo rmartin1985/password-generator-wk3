@@ -14,7 +14,11 @@ I was provided a starter code of HTML and CSS and was given the challenge of add
     * choosing CANCEL will leave out that specific character type from their final password
 * Once the user has clicked through all of the alerts, a randomly generated password will appear in the text box for them to use. 
 
+<<<<<<< HEAD
 <img src="https://media.giphy.com/media/fsOUFWsmV3tSHjhnA7/giphy.gif?cid=790b761128d38bb052f84a1e1d4ca621c836a73deb94639b&rid=giphy.gif&ct=g" width="100%">
+=======
+![Password Generator]<img src="https://media.giphy.com/media/fsOUFWsmV3tSHjhnA7/giphy.gif?cid=790b761128d38bb052f84a1e1d4ca621c836a73deb94639b&rid=giphy.gif&ct=g" width="100%">
+>>>>>>> cd52e97aed2bbd5700fdf74c8910b93aeb04487a
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
