@@ -26,10 +26,14 @@ function writePassword() {
     // prompt for character count
     var characters = prompt("How many characters would you like your password to contain?\nMust be between 8 and 128 characters");
     // make sure it is between 8 and 128 characters
+    while (isNaN(characters)!=="false") {
+        alert("Please only enter numbers!");
+        return writePassword();
+    }
     if ((parseInt(characters) < 8) || (parseInt(characters) > 128)) {
         alert("Please choose a number between 8 and 128");
         return writePassword();
-    } 
+    }
     // alert if they don't choose any characters 
     else if (!characters) {
         alert("You must select a number of characters for your password");
